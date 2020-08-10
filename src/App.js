@@ -7,6 +7,7 @@ import Header from './Header';
 import TinderCard from './TinderCard';
 import SwipeButton from './SwipeButton';
 import ChatScreen from './ChatScreen';
+import ChatMessage from './ChatMessage';
 
 function App() {
 
@@ -15,10 +16,16 @@ function App() {
 
       <Router>
         <Switch>
+        <Route exact path='/chat/:person'>
+            <Header backButton = '/chat'/>
+            <ChatMessage />          
+          </Route>
+
           <Route exact path='/chat'>
             <Header backButton = '/'/>
             <ChatScreen />             
           </Route>
+
           <Route exact path='/'>
             <Header  />
             <TinderCard />

@@ -19,3 +19,7 @@
 .chat__timeStamp{
 	color: lightgray;
 }
+a{
+	text-decoration: none;
+	color: inherit;
+}
